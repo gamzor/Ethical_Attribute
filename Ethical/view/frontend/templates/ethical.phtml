@@ -1,0 +1,15 @@
+<?php
+/**
+ * @var \Kirill\Ethical\Block\Ethical $block
+ */
+?>
+<?php $product = $block->getProduct();?>
+<?php $data = explode(',',$block->getProduct()->getEthical()); ?>
+<?php $show = $product->getData('isswitch'); ?>
+<?php if ($show == 1): ?>
+    <ul class="product-icons">
+        <?php foreach($data as $value):?>
+        <?= $value; ?>
+        <?php endforeach;?>
+    </ul>
+<?php endif;?>
